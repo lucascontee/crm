@@ -19,7 +19,7 @@ namespace CRM.Controllers
         public IActionResult GetAll()
         {
             List<Costumer> list = _context.Costumers.ToList();
-            if (list == null)
+            if (list.Count == 0)
             {
                 return NoContent();
             }
